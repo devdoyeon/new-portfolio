@@ -1,0 +1,36 @@
+//= Colors
+$mainColor: #30304b;
+$fontColor: #101019;
+$subColor: #9b9bbf;
+
+//= Fonts
+$blackFont: 'NanumNeoExtraBold', '맑은 고딕', 'sans-serif';
+$boldFont: 'NanumNeoBold', '맑은 고딕', 'sans-serif';
+$middleFont: 'NanumNeoRegular', '맑은 고딕', 'sans-serif';
+$regularFont: 'NanumNeoLight', '맑은 고딕', 'sans-serif';
+
+//= Position Absolute + Opts
+@mixin position-style(
+  $position: absolute,
+  $left: null,
+  $right: null,
+  $top: null,
+  $bottom: null,
+  $zIndex: null
+) {
+  position: $position;
+  left: $left;
+  right: $right;
+  top: $top;
+  bottom: $bottom;
+  z-index: $zIndex;
+}
+
+//= Display Flex + Opts
+@mixin flex-style($direction: row, $alignVal: center, $justifyVal: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $alignVal;
+  justify-content: $justifyVal;
+  flex-wrap: wrap;
+}

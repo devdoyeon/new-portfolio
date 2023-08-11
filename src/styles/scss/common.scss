@@ -1,0 +1,45 @@
+@import './style';
+@import './animation';
+
+.row {
+  @include flex-style(row, center, center);
+}
+
+.column {
+  @include flex-style(column, center, center);
+}
+
+.container {
+  @include flex-style(column, center, flex-start);
+  width: 100vw;
+  min-height: 100vh;
+  .content-wrap {
+    @include flex-style(column, center, flex-start);
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    &.main {
+      justify-content: center;
+      .title {
+        margin-right: 30%;
+        align-items: flex-start;
+        img {
+          width: 20rem;
+          margin-bottom: 20px;
+        }
+        p {
+          font-family: $regularFont;
+          font-size: 5rem;
+          strong {
+            font-size: 5rem;
+            font-family: $boldFont;
+          }
+        }
+      }
+      .view-more {
+        @include position-style($bottom: 30px);
+        animation: upDownAni 2s infinite;
+      }
+    }
+  }
+}
