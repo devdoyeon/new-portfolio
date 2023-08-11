@@ -14,12 +14,11 @@
   width: 100vw;
   min-height: 100vh;
   .content-wrap {
-    @include flex-style(column, center, flex-start);
+    @include flex-style(column, center, center);
     width: 100%;
     min-height: 100vh;
     position: relative;
     &.main {
-      justify-content: center;
       .title {
         margin-right: 30%;
         align-items: flex-start;
@@ -40,6 +39,76 @@
         @include position-style($bottom: 30px);
         animation: upDownAni 2s infinite;
       }
+    }
+    &.stack {
+      > .column {
+        > .row {
+          width: 90%;
+          justify-content: space-between;
+          img {
+            width: 10rem;
+          }
+          &.stack {
+            margin-bottom: 30px;
+          }
+          .stack-list {
+            width: 500px;
+            .row {
+              transition: all 0.2s;
+              cursor: pointer;
+              justify-content: space-between;
+              padding: 24px 12px;
+              border: 1px solid #cdcdcd;
+              border-radius: 4px;
+              width: 100%;
+              margin-bottom: 20px;
+              p {
+                transition: all 0.2s;
+                font-family: $regularFont;
+                font-size: 18px;
+                strong {
+                  font-size: 18px;
+                  transition: all 0.2s;
+                  font-family: $boldFont;
+                }
+              }
+              svg {
+                transition: all 0.2s;
+                font-size: 1.5rem;
+              }
+              &:hover {
+                transition: all 0.2s;
+                background-color: black;
+                p {
+                  transition: all 0.2s;
+                  color: white;
+                  strong {
+                    transition: all 0.2s;
+                    color: white;
+                  }
+                }
+                svg {
+                  transition: all 0.2s;
+                  fill: white;
+                }
+              }
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+          .communicate-wrap {
+            width: 65%;
+            flex-wrap: wrap;
+            img {
+              margin: 10px;
+            }
+          }
+        }
+      }
+    }
+    .stack-info {
+      
     }
   }
 }

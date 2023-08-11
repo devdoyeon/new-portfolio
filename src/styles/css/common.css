@@ -39,14 +39,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   min-height: 100vh;
   position: relative;
-}
-.container .content-wrap.main {
-  justify-content: center;
 }
 .container .content-wrap.main .title {
   margin-right: 30%;
@@ -68,4 +65,67 @@
   position: absolute;
   bottom: 30px;
   animation: upDownAni 2s infinite;
+}
+.container .content-wrap.stack > .column > .row {
+  width: 90%;
+  justify-content: space-between;
+}
+.container .content-wrap.stack > .column > .row img {
+  width: 10rem;
+}
+.container .content-wrap.stack > .column > .row.stack {
+  margin-bottom: 30px;
+}
+.container .content-wrap.stack > .column > .row .stack-list {
+  width: 500px;
+}
+.container .content-wrap.stack > .column > .row .stack-list .row {
+  transition: all 0.2s;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 24px 12px;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.container .content-wrap.stack > .column > .row .stack-list .row p {
+  transition: all 0.2s;
+  font-family: "NanumNeoLight", "맑은 고딕", "sans-serif";
+  font-size: 18px;
+}
+.container .content-wrap.stack > .column > .row .stack-list .row p strong {
+  font-size: 18px;
+  transition: all 0.2s;
+  font-family: "NanumNeoBold", "맑은 고딕", "sans-serif";
+}
+.container .content-wrap.stack > .column > .row .stack-list .row svg {
+  transition: all 0.2s;
+  font-size: 1.5rem;
+}
+.container .content-wrap.stack > .column > .row .stack-list .row:hover {
+  transition: all 0.2s;
+  background-color: black;
+}
+.container .content-wrap.stack > .column > .row .stack-list .row:hover p {
+  transition: all 0.2s;
+  color: white;
+}
+.container .content-wrap.stack > .column > .row .stack-list .row:hover p strong {
+  transition: all 0.2s;
+  color: white;
+}
+.container .content-wrap.stack > .column > .row .stack-list .row:hover svg {
+  transition: all 0.2s;
+  fill: white;
+}
+.container .content-wrap.stack > .column > .row .stack-list .row:last-child {
+  margin-bottom: 0;
+}
+.container .content-wrap.stack > .column > .row .communicate-wrap {
+  width: 65%;
+  flex-wrap: wrap;
+}
+.container .content-wrap.stack > .column > .row .communicate-wrap img {
+  margin: 10px;
 }

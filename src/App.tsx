@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import Main from './pages/Main';
 import Intro from 'pages/Intro';
 import Sub from 'pages/Sub';
+import Career from 'pages/Career';
+import Stack from 'pages/Stack';
 
 function App() {
   const [scrollCount, setScrollCount] = useState(0);
@@ -31,11 +33,11 @@ function App() {
       className='container'
       onWheel={e => {
         if (e.nativeEvent.deltaY > 0) setScrollCount(count => count + 1);
-        else setScrollCount(count => count - 1);
+        else if (e.nativeEvent.deltaY <= 0) setScrollCount(count => count - 1);
       }}>
       <Main />
-      <Intro />
-      <Sub />
+      <Stack />
+      <Career />
     </div>
   );
 }
