@@ -25,7 +25,10 @@ const Stack = () => {
       <div className='content-wrap stack'>
         <div className='column'>
           <div className='row stack'>
-            <img src={langIcon} alt='기술 스택' />
+            <div className='column'>
+              <img src={langIcon} alt='기술 스택' />
+              <p>Stack</p>
+            </div>
             <div className='column stack-list'>
               <div className='row' id='use' onClick={e => openStackInfo(e)}>
                 <p>
@@ -45,7 +48,10 @@ const Stack = () => {
             </div>
           </div>
           <div className='row communication'>
-            <img src={communicateIcon} alt='커뮤니케이션' />
+            <div className='column'>
+              <img src={communicateIcon} alt='커뮤니케이션' />
+              <p>Communication</p>
+            </div>
             <div className='row communicate-wrap'>
               <img src={slack} alt='Slack Logo' />
               <img src={discord} alt='Discord Logo' />
