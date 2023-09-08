@@ -9,9 +9,10 @@
   @include flex-style(column, center, center);
 }
 
+
 .container {
   @include flex-style(column, center, flex-start);
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   .content-wrap {
     @include flex-style(column, center, center);

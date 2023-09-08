@@ -8,7 +8,7 @@ import Stack from 'pages/Stack';
 
 function App() {
   const [scrollCount, setScrollCount] = useState(0);
-  const pageLength = 3;
+  const pageLength = 2;
 
   useEffect(() => {
     window.addEventListener(
@@ -21,11 +21,13 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (scrollCount >= pageLength || scrollCount < 0) return;
-    window.scrollTo({
-      top: window.innerHeight * scrollCount,
-      behavior: 'smooth',
-    });
+    if (scrollCount > pageLength) setScrollCount(pageLength);
+    else if (scrollCount < 0) setScrollCount(0);
+    else
+      window.scrollTo({
+        top: window.innerHeight * scrollCount,
+        behavior: 'smooth',
+      });
   }, [scrollCount]);
 
   return (
