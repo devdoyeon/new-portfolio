@@ -1,28 +1,32 @@
 import { useState, MouseEvent } from 'react';
-import langIcon from 'image/languageIcon.png';
-import communicateIcon from 'image/communicationIcon.png';
-import { BsArrowRightSquareFill } from 'react-icons/bs';
-import slack from 'image/communicate/slack.png';
-import discord from 'image/communicate/discord.png';
-import asana from 'image/communicate/asana.png';
-import jira from 'image/communicate/jira.png';
-import StackInfo from 'components/StackInfo';
+// import langIcon from 'image/languageIcon.png';
+// import communicateIcon from 'image/communicationIcon.png';
+// import { BsArrowRightSquareFill } from 'react-icons/bs';
+// import slack from 'image/communicate/slack.png';
+// import discord from 'image/communicate/discord.png';
+// import asana from 'image/communicate/asana.png';
+// import jira from 'image/communicate/jira.png';
+// import StackInfo from 'components/StackInfo';
 
 const Stack = () => {
-  const [stackInfoToggle, setStackInfoToggle] = useState(false);
-  const [selectStack, setSelectStack] = useState('');
+  // const [stackInfoToggle, setStackInfoToggle] = useState(false);
+  // const [selectStack, setSelectStack] = useState('');
 
-  const openStackInfo = (select: MouseEvent<HTMLDivElement>): void => {
-    if (select.target instanceof HTMLDivElement) {
-      console.log(select.target.id);
-      setSelectStack(select.target.id);
-      setStackInfoToggle(false);
-    }
-  };
+  // const openStackInfo = (select: MouseEvent<HTMLDivElement>): void => {
+  //   if (select.target instanceof HTMLDivElement) {
+  //     console.log(select.target.id);
+  //     setSelectStack(select.target.id);
+  //     setStackInfoToggle(false);
+  //   }
+  // };
 
   return (
     <>
-      <div className='content-wrap stack'>
+    <div className="content-wrap stack">
+      
+      stack
+    </div>
+      {/* <div className='content-wrap stack'>
         <div className='column'>
           <div className='row stack'>
             <div className='column'>
@@ -66,7 +70,7 @@ const Stack = () => {
           setStackInfoToggle={setStackInfoToggle}
           selectStack={selectStack}
         />
-      )}
+      )} */}
     </>
   );
 };

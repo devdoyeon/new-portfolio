@@ -108,6 +108,23 @@
         }
       }
     }
+    &.intro {
+      .a {
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        .content {
+          flex-shrink: 0;
+          width: 700px;
+          height: 300px;
+          margin-right: 40px;
+          background-color: gray;
+          border: 1px solid black;
+        }
+      }
+    }
     .stack-info {
     }
   }

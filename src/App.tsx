@@ -8,7 +8,8 @@ import Stack from 'pages/Stack';
 
 function App() {
   const [scrollCount, setScrollCount] = useState(0);
-  const pageLength = 2;
+  const [blockScroll, setBlockScroll] = useState(false);
+  const pageLength = 3;
 
   useEffect(() => {
     window.addEventListener(
@@ -34,10 +35,12 @@ function App() {
     <div
       className='container'
       onWheel={e => {
+        if (blockScroll) return;
         if (e.nativeEvent.deltaY > 0) setScrollCount(count => count + 1);
         else if (e.nativeEvent.deltaY <= 0) setScrollCount(count => count - 1);
       }}>
       <Main />
+      <Intro setBlockScroll={setBlockScroll} scrollCount={scrollCount}/>
       <Stack />
       <Career />
     </div>

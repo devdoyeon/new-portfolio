@@ -129,3 +129,18 @@
 .container .content-wrap.stack > .column > .row .communicate-wrap img {
   margin: 10px;
 }
+.container .content-wrap.intro .a {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+.container .content-wrap.intro .a .content {
+  flex-shrink: 0;
+  width: 700px;
+  height: 300px;
+  margin-right: 40px;
+  background-color: gray;
+  border: 1px solid black;
+}
