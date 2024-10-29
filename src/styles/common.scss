@@ -1,0 +1,9 @@
+@import "style";
+
+.column {
+  @include flex-style(column);
+}
+
+.row {
+  @include flex-style();
+}
